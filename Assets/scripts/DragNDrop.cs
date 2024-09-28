@@ -19,6 +19,7 @@ public class DragNDrop : Block
             Debug.DrawRay(transform.position, transform.up *-1* lineSize, Color.red);
 
             //닿은애들 싹다데려와서 거리비교하고 제일 짧은 거리에 있는 애한테 붙이기 
+            //나중에 구현
         }
     }
 
