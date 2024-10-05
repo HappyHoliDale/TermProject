@@ -1,10 +1,32 @@
 using UnityEngine;
 
-public class DragNDrop : Block
+public class DragNDrop : MonoBehaviour
 {
+
+    private float wid, hgt;
+    private int lineSize = 2;
+
+    //to use in GameManager 
+    //linking
+    private GameObject[] fourdirbound = new GameObject[4]; //0up 1right 2down 3left
+
+    
+
+
+
+    private void Start()
+    {
+        wid = gameObject.transform.localScale.x;
+        hgt = gameObject.transform.localScale.y;
+
+
+    }
+
+
     private bool dragging = false;
     private RaycastHit2D[] raycasthits = new RaycastHit2D[4];
     private Vector2[] howfar = new Vector2[4];
+
 
 
     private void Update()
@@ -111,5 +133,15 @@ public class DragNDrop : Block
         }
 
         //yay we can now snap
+    }
+
+
+    //four direction bound
+    private void FourDirBound()
+    {
+        //what I know : the block I snapped
+        //스냅할 때 받은 것에만 먼저 연결
+        //받은 것의 나랑 닿은 쪽에 스냅 
+        //스냅된애들끼리 라인렌더러로 선 그려주기 
     }
 }

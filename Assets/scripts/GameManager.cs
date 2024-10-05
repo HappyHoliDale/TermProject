@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-   
+
+    [SerializeField] GameObject StartBlock;
+    
    private void Start()
     {
          Application.targetFrameRate =60;
