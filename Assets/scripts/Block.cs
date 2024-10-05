@@ -9,7 +9,7 @@ using UnityEngine.UI;
 public class Block : MonoBehaviour
 {
     protected float wid, hgt;
-    protected int lineSize = 3;
+    protected int lineSize = 2;
 
     public Vector2 where;
 
